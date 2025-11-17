@@ -1,0 +1,57 @@
+{
+  "doctype": "DocType",
+  "name": "CM Project Budget Line",
+  "module": "Construction Management",
+  "custom": 0,
+  "istable": 1,
+  "fields": [
+    {
+      "fieldname": "cost_code",
+      "label": "Cost Code",
+      "fieldtype": "Link",
+      "options": "CM Cost Code",
+      "reqd": 1
+    },
+    {
+      "fieldname": "description",
+      "label": "Description",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "budget_qty",
+      "label": "Budget Qty",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "budget_cost",
+      "label": "Budget Cost",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "qty_actual",
+      "label": "Qty Actual",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "cost_actual",
+      "label": "Cost Actual",
+      "fieldtype": "Currency"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "cancel": 1,
+      "delete": 1
+    },
+    {
+      "role": "Project Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "doctype": "DocType",
+  "name": "CM Request for Information",
+  "module": "Construction Management",
+  "custom": 0,
+  "istable": 0,
+  "is_submittable": 1,
+  "track_changes": 1,
+  "fields": [
+    {
+      "fieldname": "project",
+      "label": "Project",
+      "fieldtype": "Link",
+      "options": "Project",
+      "reqd": 1
+    },
+    {
+      "fieldname": "subject",
+      "label": "Subject",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "question",
+      "label": "Question",
+      "fieldtype": "Text",
+      "reqd": 1
+    },
+    {
+      "fieldname": "discipline",
+      "label": "Discipline",
+      "fieldtype": "Select",
+      "options": "Architectural\nStructural\nCivil\nMechanical\nElectrical\nOther"
+    },
+    {
+      "fieldname": "priority",
+      "label": "Priority",
+      "fieldtype": "Select",
+      "options": "Low\nMedium\nHigh",
+      "default": "Medium"
+    },
+    {
+      "fieldname": "from_party",
+      "label": "From",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "to_party",
+      "label": "To",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "requested_response_date",
+      "label": "Requested Response Date",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "answer",
+      "label": "Answer",
+      "fieldtype": "Text"
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Draft\nSubmitted\nAnswered\nClosed",
+      "default": "Draft"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "submit": 1,
+      "cancel": 1,
+      "delete": 1
+    },
+    {
+      "role": "Project Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "submit": 1
+    }
+  ]
+}

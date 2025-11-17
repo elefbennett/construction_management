@@ -1,0 +1,39 @@
+{
+  "doctype": "DocType",
+  "name": "CM Project Budget",
+  "module": "Construction Management",
+  "custom": 0,
+  "istable": 0,
+  "fields": [
+    {
+      "fieldname": "project",
+      "label": "Project",
+      "fieldtype": "Link",
+      "options": "Project",
+      "reqd": 1
+    },
+    {
+      "fieldname": "lines",
+      "label": "Lines",
+      "fieldtype": "Table",
+      "options": "CM Project Budget Line"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "submit": 1,
+      "cancel": 1,
+      "delete": 1
+    },
+    {
+      "role": "Project Manager",
+      "read": 1,
+      "create": 1,
+      "write": 1
+    }
+  ]
+}

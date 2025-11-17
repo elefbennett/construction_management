@@ -1,0 +1,73 @@
+{
+  "doctype": "DocType",
+  "name": "CM Change Order",
+  "module": "Construction Management",
+  "custom": 0,
+  "istable": 0,
+  "fields": [
+    {
+      "fieldname": "project",
+      "label": "Project",
+      "fieldtype": "Link",
+      "options": "Project",
+      "reqd": 1
+    },
+    {
+      "fieldname": "change_order_number",
+      "label": "Change Order Number",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "title",
+      "label": "Title",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Draft\nSubmitted\nApproved\nRejected\nInvoiced",
+      "default": "Draft"
+    },
+    {
+      "fieldname": "date_issued",
+      "label": "Date Issued",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "date_approved",
+      "label": "Date Approved",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "total_amount",
+      "label": "Total Amount",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "items",
+      "label": "Items",
+      "fieldtype": "Table",
+      "options": "CM Change Order Item"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "submit": 1,
+      "cancel": 1,
+      "delete": 1
+    },
+    {
+      "role": "Project Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "submit": 1
+    }
+  ]
+}
